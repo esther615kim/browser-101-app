@@ -9,7 +9,7 @@ Created with CodeSandbox
 -SCSS
 
 ### Screenshot
-![image](https://user-images.githubusercontent.com/75744588/146964739-5885a684-075b-4f14-9110-ee25d8288996.png)
+![image](https://user-images.githubusercontent.com/75744588/146965977-e7fdf2ef-cdd5-4292-9522-87cc8c4e240c.png)
 
 ### Changelog
 to-be-updated

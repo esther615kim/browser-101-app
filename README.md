@@ -9,12 +9,27 @@ Created with CodeSandbox
 -SCSS
 
 ### Screenshot
-![image](https://user-images.githubusercontent.com/75744588/146965977-e7fdf2ef-cdd5-4292-9522-87cc8c4e240c.png)
+<img src="https://user-images.githubusercontent.com/75744588/147405804-5a9b59b8-9b2a-42c4-8d26-3a14766fee91.png" width="550"> 
 
 ### Changelog
-to-be-updated
+`Types of changes`
+`Added` for new features.
+`Changed` for changes in existing functionality.
+`Removed` for now removed features.
+`Fixed` for any bug fixes.
+`Security` in case of vulnerabilities.
+`Setting & Install` for anything installed or changed in settings.
+
+[0.0.2] 2021.12.26
+
+`Added` 
+- webAPI.js
+`Changed`
+- styles.scss
+- 
 [0.0.1] 2021.12.21
-`add`
+
+`Added`
 - index.js
 - styles.scss
 - index.html

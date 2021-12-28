@@ -13,32 +13,39 @@
   display: none;
 }
 
-.btn {
-  min-width: 3rem;
+.btn,.scrollBtn {
+  min-width: 3.2rem;
+  height:1.8rem;
   margin: 5px 5px 5px 0;
-  padding: 3px 5px;
-  font-family: sans-serif;
+  padding: 3px 6px;
   border: none;
+  background:
+  #eee;
+  border-radius:3px;
   box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
   font-size: 16px;
+  font-family: sans-serif;
   font-weight:600;
-
 }
+
+.clear{
+  background: #f57520;  
+  color:#fff;
+  margin: 5px 5px 15px 0;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+}
+
 aside{
   margin-left:5px;
   width:7rem;
   // flex:1;
   flex-direction: column;
   :hover {
-    color:#feecba;
-    background:#aaa;
+    color:#212121;
     transform: scale(0.95);
   }
 }
 
-.left-bar{
-  border:1px solid blue;
-}
 .play-ground-box{
   position:relative;
   flex:6;
@@ -46,13 +53,24 @@ aside{
   margin:0 5px;
   box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
   background-color:#f2f6fc;
-  height:80vh;
+  // height:80vh;
 }
 .play-ground{
   // border:1px solid pink;
   width:100%;
   height:80vh;
   position:relative;
+  display:flex;
+}
+
+.scrollContainer{
+  width:100%;
+  height:80vh;
+  display:flex;
+  flex-direction:column;
+  overflow:auto;
+  overflow-x:hidden;
+  align-items:center;
 }
 .content{
   display:flex;
@@ -84,14 +102,14 @@ main{
 }
 
 .bgBlack {
-  background-color:#212121;
+  background-color:#373e40;
   border-radius: 5px;
 }
 
 .axisX{
   width:100%;
   height:2px;
-  background:pink;
+  background:#c4e9f5;
   position:absolute;
   top:50%; // 
   // display:none;
@@ -100,7 +118,7 @@ main{
 .axisY{
   height:100%;
   width:2px;
-  background:pink;
+  background:#c4e9f5;
   position:absolute;
   left:50%; // 
 }
@@ -128,4 +146,44 @@ main{
   position:absolute;
   left:50%; 
   top:50%// 
+}
+
+.scrollBox{
+padding:10%;
+width:10rem;
+display:block;
+height:10rem;
+background:#828279;
+border-radius:5px;
+margin:1rem 1rem 0.5rem;
+display:flex;
+align-items:center;
+justify-content: center;
+color:#fff;
+}
+
+.scrollBox:last-child{
+  background: linear-gradient(-45deg,#f6ff7a,#4bd9db,#e8d046);
+}
+
+.btns{
+  width:100%;
+  position:fixed;
+  top:120px;
+  right:-10rem;
+  display:flex;
+  margin:1rem;
+  // justify-content:center;
+}
+
+.scrollToSecond,.scrollToSpecialBtn {
+  height:1.8rem;
+  margin: 5px 5px 5px 0;
+  padding: 5px 10px;
+  border: none;
+  background:#eee;
+  border-radius:3px;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight:600;
 }

@@ -11,7 +11,13 @@
   </head>
   <body>
     <div id="app">
-      <h2>browser 101</h2>
+      <div class="logo">
+        <h2>browser 101</h2>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/35/35446.png"
+          alt="logo"
+        />
+      </div>
       <!-- content table -->
       <nav>
         <ul class="content">
@@ -32,22 +38,27 @@
       <main>
         <!-- exercise-list -->
         <aside>
-          <button id="button1" class="btn">
-            browser sizes
+          <button id="clear" class="clear btn">
+            clear box <i class="fa fa-trash"></i>
+          </button>
+          <button id="scroll" class="btn">
+            scroll-to/by
           </button>
           <button id="coordinates" class="btn">
             coordinates
           </button>
+          <button id="findMyCat" class="btn">
+            find my cat
+          </button>
         </aside>
         <!-- play-ground -->
         <div class="play-ground-box">
-          <i class="fa fa-times"></i>
           <div class="play-ground"></div>
         </div>
       </main>
     </div>
     <!-- end of app -->
 
-    <script src="src/browser/webAPIs.js"></script>
+    <script src="src/browser/webAPI.js"></script>
   </body>
 </html>

@@ -9,10 +9,8 @@ Created with CodeSandbox
 - SCSS
 
 ### Screenshot
-<img src="https://user-images.githubusercontent.com/75744588/147405804-5a9b59b8-9b2a-42c4-8d26-3a14766fee91.png" width="550"> 
-
+<img src="https://images.velog.io/images/ek615/post/cba39123-7597-43be-8edc-72b6e174384b/image.png" width="550"> 
 <img src="https://images.velog.io/images/ek615/post/c1d6e043-c7f2-47e8-9c62-f75556c8dcbd/image.png" width="550"> 
-
 
 
 ### Changelog
@@ -25,7 +23,15 @@ Created with CodeSandbox
 - `Security` in case of vulnerabilities.
 - `Setting & Install` for anything installed or changed in settings.
 
-[0.0.2] 2021.12.26
+[0.0.4] 2022.01.02
+
+`Changed` 
+- webAPIs.js to add Web API exercise 3.find my cat
+- styles.scss to style exercise 3.find my cat codes
+- data.js to add cat_photos data
+
+
+[0.0.3] 2021.12.26
 
 `Changed` 
 - webAPIs.js to add exercise 1-1 scrollbuttons and 1-2 coordinates

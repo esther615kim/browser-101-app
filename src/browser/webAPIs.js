@@ -1,9 +1,12 @@
 // import { NoEmitOnErrorsPlugin } from "webpack";
 import "../styles.scss";
+import { cat_photos } from "./data";
+
 const clear = document.querySelector("#clear");
 const scrollBtn = document.getElementById("scroll");
 const coordinates = document.getElementById("coordinates");
 const playGround = document.querySelector(".play-ground");
+const findMyCatBtn = document.getElementById("findMyCat");
 
 // create-div factory func
 function createDiv(element, parent, className, text) {
@@ -21,6 +24,7 @@ function clearPlayground() {
     console.log("childnodes", playGround.childNodes);
   }
 }
+
 // exercise 1-1 scrol-to/by
 function handleCLickscroll() {
   if (playGround.hasChildNodes()) clearPlayground();
@@ -60,6 +64,32 @@ function handleCLickscroll() {
     }
   }
 }
+// exercise 1-3 find my cat
+function handleCickFindMyCat() {
+  // clear
+  if (playGround.hasChildNodes()) clearPlayground();
+  // add items
+  // add items
+  if (!playGround.hasChildNodes()) {
+    playGround.classList.toggle("bgBlack");
+    createDiv("div", playGround, "wrapper");
+    const wrapper = document.querySelector(".wrapper");
+    if (wrapper) {
+      createDiv("h4", wrapper, "game-title", "where is my cat?");
+      createDiv("img", wrapper, "catPhoto");
+      const catPhoto = document.querySelector(".catPhoto");
+      if (catPhoto) {
+        catPhoto.src = cat_photos[0];
+      }
+      createDiv("span", wrapper, "circle", "3");
+      createDiv("span", wrapper, "catChat");
+      createDiv("span", wrapper, "cat-1");
+      document.querySelector(
+        ".catChat"
+      ).innerHTML = `<i class="fa fa-comment"></i>`;
+    }
+  }
+}
 
 // exercise1-2 coordinates
 function handleClickCoordinates() {
@@ -74,6 +104,10 @@ function handleClickCoordinates() {
     createDiv("span", playGround, "targetImage", "image");
   }
 }
+
+// clickevent 1
+// 1.targetBox clicked => !chat con
+// 2.time's up or click elsewhere =>exclamation-triangle
 
 function handleMouseOver(e) {
   const axisX = document.querySelector(".axisX");
@@ -99,8 +133,9 @@ function handleMouseOver(e) {
 // events
 coordinates.addEventListener("click", handleClickCoordinates);
 scrollBtn.addEventListener("click", handleCLickscroll);
-
+findMyCatBtn.addEventListener("click", handleCickFindMyCat);
 playGround.addEventListener("mouseover", handleMouseOver);
 
 clear.addEventListener("click", clearPlayground);
 // window.scrollBy(0, 150);
+// const specialBox = document.querySelector(".scrollBox:last-child");

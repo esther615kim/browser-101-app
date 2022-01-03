@@ -81,16 +81,15 @@ function handleCickFindMyCat() {
       if (catPhoto) {
         catPhoto.src = cat_photos[0];
       }
-      createDiv("span", wrapper, "circle", "3");
-      createDiv("span", wrapper, "catChat");
+      createDiv("span", wrapper, "timer");
       createDiv("span", wrapper, "cat-1");
-      document.querySelector(
-        ".catChat"
-      ).innerHTML = `<i class="fa fa-comment"></i>`;
+
+      const timer = document.querySelector(".timer");
+
+      startTimer(timer, wrapper);
     }
   }
 }
-
 // exercise1-2 coordinates
 function handleClickCoordinates() {
   // clear
@@ -104,10 +103,27 @@ function handleClickCoordinates() {
     createDiv("span", playGround, "targetImage", "image");
   }
 }
-
-// clickevent 1
 // 1.targetBox clicked => !chat con
+
 // 2.time's up or click elsewhere =>exclamation-triangle
+function startTimer(timer, wrapper) {
+  let timeLeft_Sec = 5;
+
+  const startTimer = setInterval(() => {
+    timer.innerText = `${timeLeft_Sec}`;
+    timeLeft_Sec = timeLeft_Sec - 1;
+
+    if (timeLeft_Sec === -1) {
+      clearInterval(startTimer);
+      createDiv("span", wrapper, "chatIcon");
+      const chatIcon = document.querySelector(".chatIcon");
+      if (chatIcon) {
+        chatIcon.innerHTML = `<i class="fa fa-comment"></i>`;
+        return;
+      }
+    }
+  }, 1000);
+}
 
 function handleMouseOver(e) {
   const axisX = document.querySelector(".axisX");
@@ -123,9 +139,16 @@ function handleMouseOver(e) {
     axisX.style.top = `${y}px`;
     target.style.left = `${x}px`;
     target.style.top = `${y}px`;
-    target.innerHTML = `<br/>x:${x} y:${y}`;
     targetImage.style.left = `${x}px`;
     targetImage.style.top = `${y}px`;
+
+    // try refactoring it but it didn't work
+    // axisX.style.transform = `translateY(${y}px)`;
+    // axisX.style.transform = `translateX(${x}px)`;
+    // target.style.transform = `translate(${x}px,${y}px)`;
+    // targetImage.style.transform = `translate(${x}px,${y}px)`;
+
+    target.innerHTML = `<br/>x:${x} y:${y}`;
     targetImage.innerHTML = `<i class="fa fa-bullseye"></i>`;
   }
 }
@@ -139,3 +162,4 @@ playGround.addEventListener("mouseover", handleMouseOver);
 clear.addEventListener("click", clearPlayground);
 // window.scrollBy(0, 150);
 // const specialBox = document.querySelector(".scrollBox:last-child");
+
